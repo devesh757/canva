@@ -1,0 +1,182 @@
+
+> canva-clone@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.28
+   - Local:        http://localhost:3000
+   - Network:      http://10.19.31.80:3000
+   - Environments: .env
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+ ✓ Starting...
+ ✓ Ready in 5.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 14.7s (1348 modules)
+ GET / 200 in 16823ms
+ GET / 200 in 5406ms
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 6.3s (196 modules)
+ ○ Compiling /signin ...
+ ✓ Compiled /signin in 7.3s (1383 modules)
+ GET /signin 200 in 8251ms
+ GET / 200 in 1214ms
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 1925ms (1380 modules)
+ GET /signup 200 in 2389ms
+ GET /signin 200 in 92ms
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 1814ms (1506 modules)
+ POST /api/auth/login 200 in 6940ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1435ms (1554 modules)
+ GET /dashboard 200 in 5576ms
+ GET /dashboard 200 in 3787ms
+ GET /dashboard 200 in 1418ms
+ ○ Compiling /api/designs ...
+ ✓ Compiled /api/designs in 892ms (1556 modules)
+ POST /api/designs 201 in 2563ms
+ ○ Compiling /editor/[designId] ...
+ ✓ Compiled /editor/[designId] in 7.7s (2054 modules)
+ POST /api/designs 201 in 5140ms
+ GET /editor/cmveby9bi0001gu448nzv246e 200 in 12076ms
+ GET /editor/cmvebygf40003gu443fw2f3wt 200 in 3419ms
+ ○ Compiling /api/templates ...
+ ✓ Compiled /api/templates in 1217ms (2056 modules)
+ GET /api/templates 200 in 2142ms
+ GET /api/templates 200 in 354ms
+ ○ Compiling /api/templates/[id] ...
+ ✓ Compiled /api/templates/[id] in 796ms (2054 modules)
+ GET /api/templates/cmvebpay60006gub4fi8ex0y1 200 in 3098ms
+ GET /api/templates/cmvebpaow0005gub4kb2ptrks 200 in 1038ms
+ ○ Compiling /api/designs/[designId] ...
+ ✓ Compiled /api/designs/[designId] in 1322ms (2056 modules)
+ PATCH /api/designs/cmvebygf40003gu443fw2f3wt 200 in 5227ms
+ GET /api/templates/cmvebpb7v0007gub4qjg5jemq 200 in 756ms
+ PATCH /api/designs/cmvebygf40003gu443fw2f3wt 200 in 1380ms
+ GET /api/templates/cmvebp9vo0002gub4udzga702 200 in 1013ms
+ PATCH /api/designs/cmvebygf40003gu443fw2f3wt 200 in 1383ms
+ GET /dashboard 200 in 1781ms
+ POST /api/designs 201 in 1622ms
+ GET /editor/cmvec099t0005gu44cqwusitl 200 in 1180ms
+ GET /api/templates 200 in 795ms
+ GET /api/templates 200 in 351ms
+ GET /api/templates/cmvebpbhs0008gub4efm8rjat 200 in 1033ms
+ PATCH /api/designs/cmvec099t0005gu44cqwusitl 200 in 1736ms
+ PATCH /api/designs/cmvec099t0005gu44cqwusitl 200 in 1697ms
+ PATCH /api/designs/cmvec099t0005gu44cqwusitl 200 in 1400ms
+ PATCH /api/designs/cmvec099t0005gu44cqwusitl 200 in 1729ms
+ GET /dashboard 200 in 1091ms
+ GET /api/templates 200 in 407ms
+ GET /api/templates 200 in 356ms
+ GET /api/templates 200 in 390ms
+ GET /api/templates 200 in 408ms
+ GET / 200 in 124ms
+ GET /dashboard 200 in 1055ms
+ GET /dashboard 200 in 3658ms
+prisma:error Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+prisma:error Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+prisma:error Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+prisma:error Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+ ✓ Compiled in 2.9s (885 modules)
+ ✓ Compiled in 579ms (885 modules)
+ ✓ Compiled in 562ms (885 modules)
+ ✓ Compiled in 657ms (885 modules)
+ ✓ Compiled in 608ms (885 modules)
+ ✓ Compiled in 648ms (885 modules)
+ ✓ Compiled in 626ms (885 modules)
+ ✓ Compiled in 637ms (885 modules)
+ ✓ Compiled in 1615ms (885 modules)
+ ✓ Compiled in 533ms (885 modules)
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`
+ ⨯ src\app\layout.tsx
+`next/font` error:
+Unknown weight `700` for font `Bebas Neue`.
+Available weights: `400`

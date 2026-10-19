@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" // switch to "postgresql" in production
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String     @id @default(cuid())
+  name          String?
+  email         String     @unique
+  emailVerified DateTime?
+  image         String?
+  password      String? // null for OAuth-only accounts
+  plan          String     @default("free") // free | pro | enterprise
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  designs       Design[]
+  accounts      Account[]
+}
+
+// Auth lifecycle tracking (credentials + future OAuth providers)
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  provider          String // credentials | google | github
+  providerAccountId String
+  tokensIssuedAt    DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+// Design: metadata + strict JSON payload of all layered canvas objects
+model Design {
+  id           String   @id @default(cuid())
+  userId       String
+  title        String   @default("Untitled design")
+  category     String   @default("custom")
+  width        Int      @default(1280)
+  height       Int      @default(720)
+  thumbnailUrl String?
+  jsonPayload  String   @default("{}") // full Fabric.js layer graph snapshot
+  meta         String   @default("{}") // e.g. {"kind":"video","durationSec":15}
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, updatedAt])
+}
+
+// Asset: global library — vectors, icons, background images
+model Asset {
+  id        String   @id @default(cuid())
+  type      String // vector | icon | background | template | upload
+  category  String   @default("general")
+  title     String   @default("")
+  url       String   @default("")
+  meta      String   @default("{}") // e.g. viewBox, palette, bounds
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([type, category])
+}
+
+// Template: reusable design blueprints (dashboard gallery)
+model Template {
+  id          String   @id @default(cuid())
+  title       String
+  category    String // thumbnail | reel | card | story | presentation | video | ads | logo | flyer
+  thumbnailUrl String?
+  previewUrl  String?
+  width       Int
+  height      Int
+  jsonPayload String   @default("{}")
+  isPro       Boolean  @default(false)
+  meta        String   @default("{}") // e.g. {"kind":"video","durationSec":30,"animated":true}
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+}

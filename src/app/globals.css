@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 262 83% 95%;
+  --accent-foreground: 262 83% 30%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 262 83% 58%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 0 0% 4.5%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 7.5%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 262 83% 66%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 63%;
+  --accent: 262 60% 20%;
+  --accent-foreground: 262 83% 88%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 14%;
+  --input: 0 0% 16%;
+  --ring: 262 83% 66%;
+  --radius: 0.75rem;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.35);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-muted-foreground/30;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Aurora gradient blobs */
+.aurora {
+  background-image:
+    radial-gradient(at 10% 10%, hsl(var(--primary) / 0.28) 0px, transparent 55%),
+    radial-gradient(at 85% 15%, rgba(56, 189, 248, 0.22) 0px, transparent 50%),
+    radial-gradient(at 20% 90%, rgba(244, 114, 182, 0.25) 0px, transparent 55%),
+    radial-gradient(at 90% 85%, hsl(var(--primary) / 0.35) 0px, transparent 50%);
+  filter: blur(60px);
+}
+
+/* Text gradient */
+.text-gradient {
+  @apply bg-gradient-to-r from-primary via-fuchsia-400 to-sky-400 bg-clip-text text-transparent;
+}
+
+/* Glassmorphism */
+.glass {
+  @apply bg-card/70 backdrop-blur-xl border border-border/60;
+}
+
+/* Checkerboard transparency backdrop for the editor artboard */
+.checkerboard {
+  background-image:
+    linear-gradient(45deg, rgba(128, 128, 128, 0.12) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(128, 128, 128, 0.12) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(128, 128, 128, 0.12) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(128, 128, 128, 0.12) 75%);
+  background-size: 18px 18px;
+  background-position: 0 0, 0 9px, 9px -9px, -9px 0px;
+}
+
+/* Floating badge for code scrollbars in editor panels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+input[type="color"] {
+  @apply h-8 w-10 cursor-pointer rounded border border-input bg-transparent p-0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 2px;
+}
+input[type="color"]::-webkit-color-swatch {
+  @apply rounded border-0;
+}
+
+/* fabric.js selection corners — match the brand */
+.canvas-container { position: relative; }
